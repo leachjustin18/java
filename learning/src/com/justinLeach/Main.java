@@ -1,33 +1,22 @@
 package com.justinLeach;
 
-import java.awt.*;
-import java.util.Date;
-
 public class Main {
 
-    public Main(String name, byte age) {
-        System.out.println("My name " + name + " and I am " + age + " year old");
-    }
-    
-    private static String Animal(String name, String age, String type) {
-        return "My animal's name is " + name + " and it is " + age + " old and it's a " + type;
-    }
-
     public static void main(String[] args) {
-        Date now = new Date();
-        System.out.println("Date " + now);
+        String messageOldWay = new String("old way");
+        System.out.println("Old way string " + messageOldWay);
 
-        long timeString = now.getTime();
-        System.out.println("Time string " + timeString);
-
-        new Main("Justin", (byte) 30);
-
-        String animal = Animal("Timothy", "6 months", "dog");
-        System.out.println(animal);
-
-        Point point1 = new Point(1, 1);
-        Point point2 = point1;
-        point1.x = 2;
-        System.out.println(point2);
+        //Standard way of determining string
+        String message = "   Standard Message  ";
+        System.out.println("Standard way " + message);
+        System.out.println("Ends with E " + message.endsWith("e"));
+        System.out.println("Starts with E " + message.startsWith("e"));
+        System.out.println("Uppercase " + message.toUpperCase());
+        System.out.println("Length " + message.length());
+        System.out.println("Index of " + message.indexOf("n"));
+        System.out.println("Index of not found " + message.indexOf("z"));
+        System.out.println("Replace " + message.replace("s", "c"));
+        System.out.println("Lowercase " + message.toLowerCase());
+        System.out.println("Trim " + message.trim());
     }
 }
